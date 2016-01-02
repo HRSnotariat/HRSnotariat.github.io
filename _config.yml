@@ -1,0 +1,55 @@
+title:            Notariat Hansruedi Stadler
+tagline:
+description:
+canonical: http://notariat.hansruedi-stadler.ch
+
+# Owner/author information
+owner:
+  name:           Hansruedi Stadler
+  bio:            "Rechtsanwalt und Notar"
+  email:          stadler.hansruedi@bluewin.ch
+  location:       "Altdorf, Uri, Schweiz"
+
+tools:
+  standards:      "HTML, SCSS, Jekyll"
+  software:       "git"
+
+
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Über mich
+    url: /about.html
+  - title: Dienstleistungen
+    url: /dienstleistungen.html
+  - title: Eherecht
+    url: /dienstleistungen/eherecht.html
+
+timezone:    Europe/Zurich
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+sass:
+    style: :compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
