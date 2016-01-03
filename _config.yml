@@ -14,17 +14,19 @@ tools:
   standards:      "HTML, SCSS, Jekyll"
   software:       "git"
 
-
-
 # Links to include in top navigation
 # For external links add external: true
 links:
   - title: Über mich
     url: /about.html
-  - title: Dienstleistungen
-    url: /dienstleistungen.html
-  - title: Eherecht
-    url: /dienstleistungen/eherecht.html
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+
 
 timezone:    Europe/Zurich
 future:      true
@@ -50,6 +52,12 @@ sass:
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
+
+jekyll-press:
+  exclude: 'atom.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  js_options: {}      # js minifier options
+  css_options: {}     # css minifier options
+  html_options: {}    # html minifier options
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

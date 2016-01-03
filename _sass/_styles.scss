@@ -13,7 +13,7 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: $serif;
+    font-family: $sans;
 }
 
 p {
@@ -132,7 +132,7 @@ input {
 .icons {
   font-family: "Icons";
   font-size: 14px;
-  line-height: 20px; 
+  line-height: 20px;
 }
 
 .bb {
@@ -172,19 +172,22 @@ input {
 /* Header */
 
 header.site-header {
+
   padding: 20px 0;
   position: absolute;
   width: 100%;
   z-index: 5000;
-  
+
   .wrap {
       max-width: 90vw;
   }
-
+  opacity: 0.99;
+  background: rgb(54, 25, 25); /* Fall-back for browsers that don't support rgba */
+  background: rgba(255, 255, 255, .5);
 }
 
 #bump .darken {
-      
+
       a {
       color: $black;
       @include transit(all, .2s, ease-in-out);
@@ -194,15 +197,15 @@ header.site-header {
         @include transit(all, .2s, ease-in-out);
         }
       }
-      
+
       .menu .icons {
           color: $black;
       }
-      
+
       nav ul li a {
             color: $black;
             &:active {
-              color: $link;  
+              color: $link;
             }
             &:hover {
                 text-shadow: none;
@@ -214,25 +217,89 @@ header.site-header {
 
 
 header.site-header a.menu {
-  display: none;
+  position: absolute;
+  right: 7%;
+  display: block;
+  float: right;
+  width: 16px;
+  height: 16px;
+  color: $headercolor;
+  .icons {
+      font-size: 38px;
+  }
 }
+
+header.site-header a.menu img {
+  width: 24px;
+  height: auto;
+}
+
+header.site-header nav {
+  display: none;
+  float: none;
+  width: 100%;
+  padding-right: 0;
+}
+
+header.site-header nav:before {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+header.site-header nav ul {
+  padding: 20px 0 10px 0;
+  margin-top: 15px;
+}
+
+header.site-header nav ul li {
+  display: block;
+  margin-left: 0;
+  top: 0px;
+  font-size: $fs5;
+}
+
+header.site-header nav ul li a {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  line-height: 200%;
+  text-transform: uppercase;
+  padding-right: 7%;
+  position: relative;
+  width: 100%;
+  color: $headercolor;
+  &:active {
+    color: $white;
+  }
+  &:hover {
+      text-shadow: none;
+  }
+}
+header.site-header hgroup h1 {
+  margin-bottom: 0;
+  font-size: $fsp;
+}
+
 
 header.site-header hgroup h1, header.site-header nav ul {
   font-family: $sans;
 }
+
 header.site-header hgroup {
   float: left;
   padding-left: 5vw;
   h1 {
       font-weight: 700;
-      font-size: 18px;
+      font-size: 25px;
       line-height: 100%;
-      color: $accent;
+      color: $dark-blue;
       letter-spacing: 2px;
       text-transform: uppercase;
+      margin-right: 50px;
   }
   a {
-      color: #fff;
+      color: $dark-blue;
       @include transit(all, .2s, ease);
 
       &:hover {
@@ -242,59 +309,32 @@ header.site-header hgroup {
   }
 }
 
-header.site-header nav {
-  float: right;
-  display: block;
-  padding-right: 5vw;
-  @include clearfix;
-  
-  ul li {
-    font-size: 16px;
-    text-transform: uppercase;
-    display: inline;
-    font-weight: bold;
-    top: 2px;
-    position: relative;
-    margin-left: 20px; 
-    a {
-        color: white;
-        @include transit(all, .2s, ease);
-        &:hover {
-            @include tshd(0, 0, 3px, rgba(255,255,255,.6));
-            @include transit(all, .2s, ease);
-        }
-    } 
-  }
-}
-
 
 /* Article Stuff */
-
-   
 .article {
     position: relative;
     margin-bottom: $lh;
-    
+
     .overlay {
         vertical-align: middle;
-        min-height: 360px;
-        height: 40vh;
+        min-height: 450px;
+        height: 40vw;
         width: 100%;
-        max-height: 900px;
+        max-height: 90%;
         position: absolute;
         z-index: 2;
-        background: rgba(0,0,0,.55);
+        background: rgba(0,0,0,.1);
     }
     .overlay-lighter {
         background: rgba(0,0,0,.1);
     }
-    
+
     .featured-image {
         vertical-align: middle;
-        min-height: 360px;
-        height: 40vh;
+        min-height: 450px;
+        height: 45vw;
         width: 100%;
-        max-height: 900px;
+        max-height: 90%;
         background-position: center center;
         background-size: cover;
         vertical-align: middle;
@@ -305,10 +345,10 @@ header.site-header nav {
         top: 0;
         z-index: -1;
         img {
-            max-height: 900px;
+            max-height: 90%;
         }
     }
-    
+
     // Header Stuff
     header {
         margin: (2*$lh) 0 $lh 0;
@@ -327,7 +367,6 @@ header.site-header nav {
                 margin-top: $lh * 2/3;
             }
         }
-        
         .intro {
             text-align: left;
         }
@@ -351,7 +390,7 @@ header.site-header nav {
     margin: 0 auto;
     float: none;
     padding-top: 140px;
-    
+
     // Post Listing
     .post-list {
         list-style-type: none;
@@ -360,25 +399,25 @@ header.site-header nav {
         @include push(2);
         display: block;
         float: none;
-        
+
         lh h2 {
             margin-bottom: $lh*1.5;
         }
-        
+
         li {
             display: block;
             float: none;
             font-size: $fs3;
             margin-bottom: $lh*2;
             position: relative;
-            
+
             a {
                 position: relative;
                 &:hover {
                     @include transit;
                 }
             }
-            
+
             a:hover:before {
                 content:'...';
                 color: $grey-light;
@@ -391,7 +430,7 @@ header.site-header nav {
                 text-align: center;
                 @include transit;
             }
-            
+
             a:before {
                 content:'\201c';
                 color: $grey-light;
@@ -405,22 +444,22 @@ header.site-header nav {
                 @include transit;
 
             }
-            
+
             h1 {
                 font-size: $fs3;
                 font-style: italic;
             }
         }
-        
+
         .summary {
             font-size: 18px;
             line-height: 1.45em;
         }
-        
+
         .date {
             margin-bottom: 3px;
         }
-        
+
         .date time {
             position: relative;
             top: -3px;
@@ -434,13 +473,13 @@ header.site-header nav {
         }
     }
 }
- 
+
 // Post Formatting
 
 .post {
-    
+
     min-height: 500px;
-    
+
     .deets {
         position: relative;
         top: 45px;
@@ -454,25 +493,21 @@ header.site-header nav {
             margin-bottom: $lh/2;
         }
     }
-    
-    h1 {
-        font-style: italic;
-    }
-    
+
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
         margin-bottom: ($lh * 1/2);
         line-height: 1.25em
 
     }
-    
+
     figure {
         margin: $lh 0;
-        
+
         img {
             margin-bottom: $lh/2;
         }
-        
+
         figcaption {
             font-size: $fs5;
             font-family: $sans;
@@ -482,7 +517,7 @@ header.site-header nav {
             text-align: center;
         }
     }
-    
+
     img {
         width: 100%;
         height: auto;
@@ -490,7 +525,7 @@ header.site-header nav {
         margin: $lh auto;
         @include br(4px);
     }
-    
+
     ul {
         display: block;
         margin-bottom: $lh;
@@ -502,14 +537,14 @@ header.site-header nav {
         li {
             list-style: disc;
             list-style-type: disc;
+            line-height: $lh*0.7;
             margin-left: $lh*2;
-            padding-left: $lh/3;
+            padding-left: $lh/4;
         &:last-child {
             margin-bottom: 0;
             }
         }
     }
-
     ol {
         display: block;
         margin-bottom: $lh;
@@ -525,9 +560,9 @@ header.site-header nav {
         &:last-child {
             margin-bottom: 0;
             }
-        } 
-    }  
-    
+        }
+    }
+
     .share {
         text-align: center;
         display: block;
@@ -558,11 +593,13 @@ header.site-header nav {
 footer {
     width: 100%;
     background: $black;
-    height: $footerHeight;
+    height: auto;
     font-size: $fsp;
+    font-family: $sans;
     color: $white;
     position: relative;
-        
+    padding-bottom: 20px;
+
     // Contain that ish
     section {
         @include column(10);
@@ -570,7 +607,7 @@ footer {
         display: block;
         margin: 0 auto;
     }
-    
+
     small {
         font-size: ($fs6);
         text-align: center;
@@ -578,18 +615,17 @@ footer {
         width: 100%;
         position: absolute;
         bottom: 8px;
-        font-family: $sans;
         text-transform: uppercase;
         color: transparentize($white, .9);
         a {
             color: transparentize($white, .7);
         }
     }
-    
+
     .list-title {
         margin-bottom: $lh/2;
         border-bottom: 2px solid $link;
-        font-style: italic;
+        text-transform: uppercase;
         font-size: $fs4;
     }
     .prev-posts {
@@ -624,13 +660,18 @@ footer {
             }
         }
     }
-    
+    .map {
+        margin-top: $lh;
+        margin-bottom: $lh;
+        width: 100%;
+        min-height: $footerHeight/3;
+        max-height: $footerHeight/2;
+    }
     .social {
         position: absolute;
         top: 109px;
         @include column(2,12);
         right: 5vw;
-        font-style: italic;
         a {
             &:hover {
                 color: $white;
@@ -656,7 +697,7 @@ footer {
    ========================================================================== */
 
 @media only screen and (max-width: $breakpoint-2-max-width) {
-    
+
 // Type Fixes
 
 h1 {
@@ -669,26 +710,26 @@ blockquote, blockquote p {
 
 footer {
     font-size: $fs5;
-    
+
     .prev-posts {
         li  {
-          
+
           .recent-title {
-              
+
           }
-          
+
           span.date {
               font-size: $fs6;
-          }  
+          }
         }
     }
-    
+
     .social {
         right: 10vw;
     }
 }
-    
-    
+
+
 }
 
 /* Mobile
@@ -696,16 +737,16 @@ footer {
 
 @media only screen and (max-width: 500px) {
     footer {
-    
+
     .social {
         display: none;
     }
-    
+
     aside {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .prev-posts {
         @include column(9);
         padding-left: 0;
@@ -716,106 +757,35 @@ footer {
             margin-top: $lh/2;
         }
     }
-    
+
     }
 }
 
 @media only screen and (max-width : 680px) {
- 
+
  /* All Posts */
-      
+
   section.article img.loading {
     top: 10px !important;
     right: 6%;
     left: inherit;
   }
-  
-  
+
+
   header.site-header {
     min-height: 59px;
-    margin-top: 20px;
-    padding-top: 0;
+    padding: 20px 0;
+    opacity: 0.99;
+    background: rgb(54, 25, 25); /* Fall-back for browsers that don't support rgba */
+    background: rgba(255, 255, 255, .5);
   }
-  
-  header.site-header hgroup h1 {
-    margin-bottom: 0;
-    font-size: $fsp;
-  }
-  
-  header.site-header hgroup {
-    position: absolute;
-    left: 7%;
-    float: none;
-    padding-left: 0;
-  }
-  
-  header.site-header a.menu {
-    position: absolute;
-    right: 7%;
-    display: block;
-    float: right;
-    width: 16px;
-    height: 16px;
-    color: white;
-    .icons {
-        font-size: 32px;
-    }
-  }
-  
-  header.site-header a.menu img {
-    width: 24px;
-    height: auto;
-  }
-  
-  header.site-header nav {
-    display: none;
-    float: none;
-    width: 100%;
-    padding-right: 0;
-  }
-  
-  header.site-header nav:before {
-    display: table;
-    clear: both;
-    content: '';
-  }
-  
-  header.site-header nav ul {
-    padding: 20px 0 10px 0;
-    margin-top: 15px;
-  }
-  
-  header.site-header nav ul li {
-    display: block;
-    margin-left: 0;
-    top: 0px;
-    font-size: $fs5;
-  }
-  
-  header.site-header nav ul li a {
-    display: block;
-    text-align: right;
-    font-weight: bold;
-    padding: 15px 0px;
-    padding-right: 7%;
-    position: relative;
-    width: 100%;
-    color: $white;
-    &:active {
-      background-color: $link;
-      color: white;  
-    }
-    &:hover {
-        text-shadow: none;
-    }
-  }
-  
+
   #bump .darken nav ul {
           padding: 0;
           margin-top: 40px;
           background: $black;
       }
-      
+
    #bump .darken nav ul li a {
         color: $white;
         &:active {
@@ -850,7 +820,3 @@ small {
 }
 
 }
-
-
-
-

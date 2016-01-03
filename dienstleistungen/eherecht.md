@@ -1,6 +1,6 @@
 ---
 title: Eherecht
-description: Persönliche Beratung und massgeschneiderte Lösungen
+categories: [dienstleistung]
 image:
   feature: hrs1.jpg
 ---
