@@ -3,7 +3,6 @@ layout: page
 permalink: /index.html
 title: Dr. Hansruedi Stadler-Ineichen
 description: Persönliche Beratung und massgeschneiderte Lösungen
-tags: []
 image:
   feature: hrs1.jpg
 ---

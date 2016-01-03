@@ -2,7 +2,7 @@
 title: Gesellschaftsrecht
 categories: [dienstleistung]
 image:
-  feature: hrs1.jpg
+  feature: hrs3.jpg
 ---
 Sie wollen sich selbständig machen. Welche Rechtsform ist für Ihr Geschäft geeignet? Wie steht es mit der Eintragung im Handelsregister oder mit der Haftung? Was ist alles in den Statuten zu regeln? All diese Fragen kann ich Ihnen beantworten.
 
@@ -16,4 +16,4 @@ Gerne berate ich Sie umfassend und entwickle mit Ihnen die Ihren Bedürfnissen e
 - Sacheinlageverträge
 - Kapitalerhöhungen
 - Verträge zur Abtretung von Gesellschaftsanteilen
-- Aktionärbindungsverträge 
+- Aktionärbindungsverträge

@@ -2,7 +2,7 @@
 title: Eherecht
 categories: [dienstleistung]
 image:
-  feature: hrs1.jpg
+  feature: hrs3.jpg
 ---
 
 Von Gesetzes wegen ist grundsätzlich keine vertragliche Regelung notwendig. Eheleute unterstehen dem Güterstand der Errungenschaftsbeteiligung. Wollen Sie aber eine abweichende Regelung treffen, muss ein Ehevertrag abgeschlossen werden.

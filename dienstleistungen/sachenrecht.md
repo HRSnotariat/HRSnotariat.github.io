@@ -2,7 +2,7 @@
 title: Sachenrecht
 categories: [dienstleistung]
 image:
-  feature: hrs1.jpg
+  feature: hrs2.jpg
 ---
 Sie wollen eine Eigentumswohnung kaufen, auf einer Baulandparzelle ein Haus erstellen oder Sie planen eine Überbauung einer grösseren Baulandparzelle. Dank meiner grossen Erfahrung kann ich Sie bei komplexen Fragen umfassend beraten. Dazu gehören u.a. die Parzellierung von Bauland, die Errichtung von Baurechten, die Begründung von Stockwerkeigentum, die Einräumung von Dienstbarkeiten und zur Sicherstellung der Bankfinanzierung die Errichtung von Schuldbriefen. Auch kann ich Sie in allen Fragen im Zusammenhang mit der Übergabe von Landwirtschaftsbetrieben umfassend beraten.
 

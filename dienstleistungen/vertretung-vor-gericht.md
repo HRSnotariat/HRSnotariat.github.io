@@ -2,7 +2,7 @@
 title: Vertretung vor Gericht
 categories: [dienstleistung]
 image:
-  feature: hrs1.jpg
+  feature: hrs2.jpg
 ---
 
 Ich bin spezialisiert auf jene Rechtsgebiete, die im Zusammenhang mit den notariellen Dienstleistungen stehen. Ich befasse mich jedoch auch mit weiteren Rechtsfragen, wenn es darum geht, aussergerichtliche Vergleichslösungen zu finden.

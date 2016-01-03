@@ -152,7 +152,7 @@ input {
 }
 
 .wrap {
-    max-width: 960px;
+    max-width: 100%;
     @include column(10);
     float: none;
     margin: 0 auto;
@@ -162,7 +162,7 @@ input {
 
 .post {
     @include column(8);
-    max-width: 680px;
+    max-width: 70%;
     display: block;
     margin: 0 auto;
     float: none;
@@ -172,7 +172,6 @@ input {
 /* Header */
 
 header.site-header {
-
   padding: 20px 0;
   position: absolute;
   width: 100%;
@@ -273,7 +272,7 @@ header.site-header nav ul li a {
     color: $white;
   }
   &:hover {
-      text-shadow: none;
+      color: $grey-dark;
   }
 }
 header.site-header hgroup h1 {
@@ -323,7 +322,7 @@ header.site-header hgroup {
         max-height: 90%;
         position: absolute;
         z-index: 2;
-        background: rgba(0,0,0,.1);
+        background: rgba(0,0,0,0);
     }
     .overlay-lighter {
         background: rgba(0,0,0,.1);
@@ -774,7 +773,6 @@ footer {
 
   header.site-header {
     min-height: 59px;
-    padding: 20px 0;
     opacity: 0.99;
     background: rgb(54, 25, 25); /* Fall-back for browsers that don't support rgba */
     background: rgba(255, 255, 255, .5);
@@ -805,9 +803,9 @@ footer {
 
 .post {
     @include column(9);
-    max-width: 420px;
+    max-width: 95%;
     display: block;
-    margin: 0 auto;
+    margin: 0 2.5%;
     float: none;
 }
 

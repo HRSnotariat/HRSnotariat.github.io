@@ -60,10 +60,16 @@
               <a href="/" title="{{ site.title }}">Home</a>
             </li>
 {% for link in site.links %}
+{%   if link.url == node.url %}
+                <li><a class="active" href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+{% else %}
                 <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 {% endfor %}
 {% for link in site.pages %}
 {%   if link.categories contains 'dienstleistung' %}
+{%     if link.url == node.url %}
+                <li class="active" class="dienstleistung"><a href="{{ link.url }}">{{ link.title }}</a></li>
+{%     else %}
                 <li class="dienstleistung"><a href="{{ link.url }}">{{ link.title }}</a></li>
 {%   endif %}
 {% endfor %}
