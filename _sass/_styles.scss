@@ -585,7 +585,7 @@ header.site-header hgroup {
 
 /* Footer Stuff */
 .push {
-    height: $footerHeight/4 !important;
+    height: 40px !important;
 }
 
 footer {
@@ -626,13 +626,13 @@ footer {
         text-transform: uppercase;
         font-size: $fs4;
     }
-    .prev-posts {
+    .address {
         @include column(6,10);
         max-width: 600px;
-        min-height: 250px;
         padding-left: 5vw;
+        padding-bottom: 20px;
         p {
-            padding-top: $lh*2;
+            padding-top: $lh;
         }
         li {
             @include row(12);
@@ -658,32 +658,34 @@ footer {
             }
         }
     }
-    .map {
+    #map {
+        display: block;
         margin-top: $lh;
         margin-bottom: $lh;
         width: 100%;
-        min-height: $footerHeight/3;
-        max-height: $footerHeight/2;
+        min-height: $mapHeight/2;
+        max-height: $mapHeight/2;
     }
-    .social {
-        position: absolute;
-        top: 109px;
-        @include column(2,12);
-        right: 5vw;
-        a {
-            &:hover {
-                color: $white;
-            }
-        }
-        ul {
-            li {
-                margin-bottom: $lh/2;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+
+}
+
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    font-family: $sans;
+    font-size: $fs5;
+    margin: 0;
+    padding: 0;
+}
+
+.gm-style-iw h4 {
+    font-weight: bold;
+}
+
+.gm-style-iw a {
+    color: #4272db;
 }
 
 .disqus {

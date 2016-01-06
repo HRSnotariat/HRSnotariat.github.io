@@ -17,7 +17,12 @@ $(document).ready(function() {
 
 });
 
-
+$(document).ready(function() {
+    var vpH = $(window).height();
+    var vH = vpH - 350;
+    $('.overlay').css("height", vH);
+    $('.featured-image').css("height", vH);
+});
 
 
 $(function(){
@@ -44,3 +49,14 @@ $(function(){
         setTimeout(function(){ t.addClass('slider'); }, (i+1) * 330);
     });
 });
+
+function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);

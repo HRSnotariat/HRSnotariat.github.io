@@ -1,29 +1,19 @@
-<div class="push"></div>
+  <div class="push"></div>
   <footer>
     <aside class="wrap">
-      <div>
-        <ol class="prev-posts">
-          <p class="list-title">Dienstleistungen</p>
-          {% for page in site.pages %}
-            {% if page.categories contains 'dienstleistung' %}
-              <li>
-                <span class="recent-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title | strip_html | strip_newlines | truncate: 30 }}</a></span>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ol>
-      </div>
-      <div class="social">
-        <ul>
-          <p class="list-title">Kontakt</p>
-            <li><a id="mail" href="mailto:{{ site.owner.email }}"><span class="foot-link">Email</span></a></li>
-
-            {% if site.owner.twitter %}
-            <li><a id="twit" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">@{{ site.owner.twitter }}</span></a></li>
-            {% endif %}
-        </ul>
-      </div>
+        <div class="address">
+            <p class="list-title">Kontakt</p>
+            <address>
+               <strong>Notariat Dr. Handruedi Stadler</strong><br/>
+               Hellgasse 23<br/>
+               CH-6460 Altdorf<br/>
+               Tel: +41 41 870 56 57<br/>
+               Email: <a href='mailto:{{ site.owner.email }}'> {{ site.owner.email }}</a>
+            </address>
+        </div>
     </aside>
+    <div id="map"></div>
+
     <small>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}</small>
   </footer>
 
