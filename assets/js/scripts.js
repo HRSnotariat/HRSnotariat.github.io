@@ -12,18 +12,9 @@ $(document).ready(function() {
     }
   });
 
-
   $('article.post iframe').wrap('<div class="video-container" />');
 
 });
-
-$(document).ready(function() {
-    var vpH = $(window).height();
-    var vH = vpH - 350;
-    $('.overlay').css("height", vH);
-    $('.featured-image').css("height", vH);
-});
-
 
 $(function(){
   $('<img>').attr('src',function(){
@@ -42,21 +33,3 @@ $(function(){
     $('div.overlay').fadeTo("slow", 0.6);
   });
 });
-
-$(function(){
-    $('.post-list li').each(function(i){
-        var t = $(this);
-        setTimeout(function(){ t.addClass('slider'); }, (i+1) * 330);
-    });
-});
-
-function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
