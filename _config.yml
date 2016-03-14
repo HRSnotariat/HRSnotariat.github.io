@@ -30,7 +30,7 @@ defaults:
 
 timezone:    Europe/Zurich
 future:      true
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 
 kramdown:
