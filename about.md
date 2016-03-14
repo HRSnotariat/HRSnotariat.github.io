@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /about.html
-title: Dr. Hansruedi Stadler
+title: Werdegang
 image:
   feature: hrs2.jpg
 ---

@@ -17,7 +17,7 @@ tools:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Über mich
+  - title: Werdegang
     url: /about.html
 
 defaults:
