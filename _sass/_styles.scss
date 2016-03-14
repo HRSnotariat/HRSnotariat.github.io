@@ -327,7 +327,7 @@ header.site-header hgroup {
     .featured-image {
         vertical-align: middle;
         height: 75vh;
-        width: 100vw;
+        width: 80vw;
         background-position: center center;
         background-size: cover;
         vertical-align: middle;
@@ -338,7 +338,7 @@ header.site-header hgroup {
         top: 0;
         z-index: -1;
         img {
-            max-height: 90%;
+            height: 80vw;
         }
     }
     // Header Stuff

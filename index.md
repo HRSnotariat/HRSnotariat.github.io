@@ -2,6 +2,7 @@
 layout: page
 permalink: /index.html
 title: Dr. Hansruedi Stadler-Ineichen
+subtitle: Notar und Rechtsanwalt
 description: Persönliche Beratung und massgeschneiderte Lösungen
 image:
   feature: hrs1.jpg
